@@ -18,10 +18,12 @@ command = "show ip int brief"
 print()
 print(net_connect.find_prompt())
 
-for x in range(5):
-    output = net_connect.send_command(command)
-    print(output)
-    print(type(output))
-    print()
-    time.sleep(10)
+output = net_connect.send_command(command)
+# print(output)
+# print(type(output))
+for x in output.splitlines():
+    if 'unassigned' in x:
+        print(x)
+        print('__')
+# print()
 net_connect.disconnect()
