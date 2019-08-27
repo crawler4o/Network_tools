@@ -10,7 +10,8 @@ my_user = input('User:')  # getpass()
 my_pass = input('Password:')  # getpass.win_getpass()
 
 command = "display logbuffer size 140"
-ignore_strings = ['SHELL_LOGIN', 'AAA_LAUNCH', 'AAA_SUCCESS', 'SSH_LOGIN', 'SSH_CONNECTION_CLOSE', my_user]
+ignore_strings = ['SHELL_LOGIN', 'AAA_LAUNCH', 'AAA_SUCCESS', 'SSH_LOGIN', 'SSH_CONNECTION_CLOSE', 'CFGMAN_EXIT',
+                  'SHELL_LOGOUT', 'v-gurinder.singh@hssbc', 'v-alireza.moharami@hssbc', 'jluo@hssbc', my_user]
 
 hosts = ['10.251.0.71',
          '10.251.0.72',
@@ -19,7 +20,7 @@ hosts = ['10.251.0.71',
          '10.251.0.75',
          '10.251.0.76']
 
-test_hosts = ['172.21.13.16', '172.16.37.243']
+test_hosts = ['172.21.13.16', '172.16.37.243']  # not in use currently
 
 connections = []
 net_connects = []
