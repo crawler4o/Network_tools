@@ -30,7 +30,7 @@ def printer(cli_output):
     for line in cli_output.splitlines():
         if not any(x in line for x in ignore_strings) and '%' in line:
             print(line)
-    print('\n _____________________ \n')
+    print('  _____________________ \n')
 
 
 for host in hosts:
@@ -53,6 +53,6 @@ while True:
         printer(output)
 
     print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-    print('Check completed. Waiting...  ', datetime.datetime.now())
+    print('Check completed. Waiting...                     ', datetime.datetime.now())
     print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
     time.sleep(900)
