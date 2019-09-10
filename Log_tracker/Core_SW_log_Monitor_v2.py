@@ -11,7 +11,8 @@ my_pass = input('Password:')  # getpass.win_getpass()
 
 command = "display logbuffer size 140"
 ignore_strings = ['SHELL_LOGIN', 'AAA_LAUNCH', 'AAA_SUCCESS', 'SSH_LOGIN', 'SSH_CONNECTION_CLOSE', 'CFGMAN_EXIT',
-                  'SHELL_LOGOUT', 'v-gurinder.singh@hssbc', 'v-alireza.moharami@hssbc', 'jluo@hssbc', my_user]
+                  'SHELL_LOGOUT', 'v-gurinder.singh@hssbc', 'v-alireza.moharami@hssbc', 'jluo@hssbc',
+                  'v-david.men@hssbc', 'v-tao.lin@hssbc;', my_user]
 
 hosts = ['10.251.0.71',
          '10.251.0.72',
