@@ -17,10 +17,10 @@ hosts = [
         '10.26.101.60',
         '10.26.101.4',
         '10.26.101.3',
-        '10.26.101.93',
-        '10.26.101.92',
-        '10.26.101.66',
-        '10.26.101.67',
+        # '10.26.101.93',
+        # '10.26.101.92',
+        # '10.26.101.66',
+        # '10.26.101.67',
         '10.27.1.2',
         '10.26.101.57',
         '10.26.101.58',
@@ -32,10 +32,13 @@ connections = []
 net_connects = []
 
 
-def printer(cli_output):
-    with open('line_cards.txt', 'w+') as file:
-        file.write(cli_output)
-    print('  _____________________ \n')
+def printer(dev, cli_output):
+    with open('line_cards.txt', 'a+') as file:
+        file.write('\n')
+        for line in cli_output.splitlines():
+            if 'WS-X' in line or 'WS-CAC' in line or 'WS-C65' in line:
+                file.write(f'{dev} >>> {line} \n')
+        file.write('______________________________________________________________________________')
 
 
 for host in hosts:
@@ -53,5 +56,6 @@ for connection in connections:
 
 for net_connect in net_connects:
     output = net_connect.send_command(command)
-    printer(output)
+    dev_id = net_connect.find_prompt()
+    printer(dev_id, output)
     net_connect.disconnect()
