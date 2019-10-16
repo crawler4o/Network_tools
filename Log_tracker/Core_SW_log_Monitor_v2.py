@@ -31,7 +31,7 @@ def printer(cli_output):
     for line in cli_output.splitlines():
         if not any(x in line for x in ignore_strings) and '%' in line:
             if 'OSPF' in line or 'BGP' in line:
-                print( '\n**********' + line + '**********\n')
+                print('\n**********' + line + '**********\n')
             else:
                 print(line)
     print('  _____________________ \n')
