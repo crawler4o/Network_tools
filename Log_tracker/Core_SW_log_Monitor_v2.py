@@ -12,7 +12,7 @@ my_pass = input('Password:')  # getpass.win_getpass()
 command = "display logbuffer size 140"
 ignore_strings = ['SHELL_LOGIN', 'AAA_LAUNCH', 'AAA_SUCCESS', 'SSH_LOGIN', 'SSH_CONNECTION_CLOSE', 'CFGMAN_EXIT',
                   'SHELL_LOGOUT', 'v-gurinder.singh@hssbc', 'v-alireza.moharami@hssbc', 'jluo@hssbc',
-                  'v-david.men@hssbc', 'v-tao.lin@hssbc;', my_user]
+                  'v-david.men@hssbc', 'v-tao.lin@hssbc;', my_user,'Member port Ten-GigabitEthernet9/0/28 of aggregation group BAGG33']
 
 hosts = ['10.251.0.71',
          '10.251.0.72',
@@ -30,7 +30,10 @@ net_connects = []
 def printer(cli_output):
     for line in cli_output.splitlines():
         if not any(x in line for x in ignore_strings) and '%' in line:
-            print(line)
+            if 'OSPF' in line or 'BGP' in line:
+                print( '\n**********' + line + '**********\n')
+            else:
+                print(line)
     print('  _____________________ \n')
 
 
