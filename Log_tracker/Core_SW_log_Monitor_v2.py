@@ -18,7 +18,7 @@ ignore_strings = ['SHELL_LOGIN', 'AAA_LAUNCH', 'AAA_SUCCESS', 'SSH_LOGIN', 'SSH_
 
 significant_line_dist = ['%', 'state is changed']
 
-highlight_key_words = ['OSPF', 'BGP']
+highlight_key_words = ['OSPF', 'BGP', 'state is changed']
 
 hosts = ['10.251.0.71',
          '10.251.0.72',
