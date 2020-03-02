@@ -15,7 +15,7 @@ with open('Data\etmTnsMonth.jsp.html') as file:
                 pass
             elif '1900N' in shift:  # night shifts
                 shifts.append({'start_date': start_date, 'end_date': next_date_str, 'start_time': '19:00', \
-                                                'end_time': '07:00', 'shift': shift[4:], })
+                                                'end_time': '07:00', 'shift': shift[3:], })
             else:
                 shifts.append({'start_date': start_date, 'end_date': start_date, 'start_time': '07:00', \
                                'end_time': '19:00', 'shift': shift[4:], })
