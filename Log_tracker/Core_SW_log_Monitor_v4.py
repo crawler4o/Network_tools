@@ -77,8 +77,8 @@ while True:
         playsound('conscript-reporting.mp3')
 
     print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-    print(f'Total number of interesting lines =             {interesting_diff}')
-    print(f'Total number of interesting lines =             {interesting_lines_new}')
+    print(f'Total delta of interesting lines  =              {interesting_diff}')
+    print(f'Total number of interesting lines =              {interesting_lines_new}')
     print('Check completed. Waiting...                     ', datetime.datetime.now())
     print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
     time.sleep(900)
