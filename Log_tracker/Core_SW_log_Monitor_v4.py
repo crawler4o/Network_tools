@@ -85,5 +85,5 @@ while True:
 
     # Warning, there is a design problem with the tool.
     # The results will not be accurate in case some lines fall behind during the same check new lines appear.
-    # Also no notification will be played if the number of disappearing new lines
+    # Also no notification will be played if the number of disappearing old lines
     # exceeds the number of new interesting lines.
