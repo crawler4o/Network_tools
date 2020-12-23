@@ -84,7 +84,7 @@ def user_month():
 if __name__ == '__main__':
 
     source_file = 'WORKBRAIN - Employee Self Service Kiosk.html'
-    year = '2020'
+    year = '2021'
 
     month = user_month()
     workbrain = parse_the_file(source_file)
